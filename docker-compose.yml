@@ -23,12 +23,12 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: "crocodile"
             MYSQL_DATABASE: "crocodile"
-        # volumes: 
-        #   - "/data:/usr/lib/mysql"   # mysql数据持久化
+        volumes: 
+          - "/data:/usr/lib/mysql"
         ports: 
           - 3306:3306
     redis:
         image: redis:latest
         restart: always
         ports: 
-          - 6379:6379
+          - 6378:6379
